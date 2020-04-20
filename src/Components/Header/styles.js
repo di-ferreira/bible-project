@@ -1,11 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Main = styled.header`
    display: flex;
    justify-content: center;
+   padding: 0 15px;
    width: 100%;
    height: 60px;
-   background: #7159c1;
+   background: linear-gradient(#5e2563, ${darken(0.1, '#5e2563')});
 `;
 export const Container = styled.div`
    display: flex;
@@ -16,14 +18,17 @@ export const Container = styled.div`
    height: 100%;
 `;
 export const Logo = styled.div`
-   display: flex;
-   align-items: center;
-   width: 250px;
-   height: 100%;
-   color: #fff;
-   font-variant: small-caps;
-   svg {
-      margin-right: 10px;
+   a {
+      display: flex;
+      align-items: center;
+      width: 250px;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+      font-variant: small-caps;
+      svg {
+         margin-right: 10px;
+      }
    }
 `;
 export const Search = styled.div`

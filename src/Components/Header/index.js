@@ -1,16 +1,19 @@
-import React from "react";
-
-import { Main, Container, Logo, Search, Button } from "./styles";
-import { FaCross, FaSearch, FaBars } from "react-icons/fa";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Main, Container, Logo, Search, Button } from './styles';
+import { FaCross, FaSearch, FaBars } from 'react-icons/fa';
 
 export default function Header() {
    return (
       <Main>
          <Container>
             <Logo>
-               <FaCross size={28} />
-               <h1>Biblia Online</h1>
+               <Link to="/">
+                  <FaCross size={28} />
+                  <h1>Biblia Online</h1>
+               </Link>
             </Logo>
+
             <Search>
                <input type="search" placeholder="Buscar" />
                <button type="button">
